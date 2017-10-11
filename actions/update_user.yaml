@@ -1,0 +1,47 @@
+name: update_user
+pack: keycloak
+runner_type: python-script
+description: "Update a user"
+enabled: true
+entry_point: "update_user.py"
+parameters:
+    username:
+      type: string
+      description: "username"
+      required: true
+      position: 0
+    email:
+      type: string
+      description: "email"
+      required: true
+      position: 1
+    realm:
+      type: string
+      description: "realm to create user in"
+      default: "master"
+    firstName:
+      type: string
+      description: "firstname"
+    lastName:
+      type: string
+      description: "lastname"
+    enabled:
+      type: boolean
+      description: "is user enabled"
+      default: true
+    emailVerified:
+      type: boolean
+      description: "is emil verified"
+      default: false
+    groups:
+      type: array
+      description: "include user in groups"
+      default: false
+    realmRoles:
+      type: array
+      description: "include user in realm roles"
+      default: false
+    clientRoles:
+      type: map
+      description: "include user in client roles"
+      default: false
