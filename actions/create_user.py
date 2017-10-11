@@ -2,15 +2,9 @@ from lib import action
 import json
 
 class KeycloakUserCreateAction(action.KeycloakBaseAction):
-    def run(self, username, email, realm, firstName, lastName, enabled, emailVerified):
+    def run(self, username, email='', firstName='', lastName='', enabled=True, emailVerified=False):
         user_id = self.keycloak_admin.get_user_id(username=username)
         if user_id = None:
-            data={}
-            data["username"]=username
-            data["email"]=email
-            data["firstName"]=firstName
-            data["lastName"]=lastName
-            data["emailVerified"]=emailVerified
-            data["enabled"]=enabled
-            self.keycloak_admin.create_user(data)
+            self.keycloak_admin.create_user(username=username, email=email, firstName=firstName, lastName=lastName, emailVerified=emailVerified, enabled=enabled)
         else:
+            return "User " + username + " already exists"

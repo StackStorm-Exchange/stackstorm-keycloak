@@ -15,10 +15,6 @@ parameters:
       description: "email"
       required: true
       position: 1
-    realm:
-      type: string
-      description: "realm to create user in"
-      default: "master"
     firstName:
       type: string
       description: "firstname"
@@ -32,16 +28,4 @@ parameters:
     emailVerified:
       type: boolean
       description: "is emil verified"
-      default: false
-    groups:
-      type: array
-      description: "include user in groups"
-      default: false
-    realmRoles:
-      type: array
-      description: "include user in realm roles"
-      default: false
-    clientRoles:
-      type: map
-      description: "include user in client roles"
       default: false
