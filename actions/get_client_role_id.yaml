@@ -1,9 +1,9 @@
-name: create_client_role
+name: get_client_role_id
 pack: keycloak
 runner_type: python-script
-description: "Create a client role"
+description: "Get client role id"
 enabled: true
-entry_point: "create_client_role.py"
+entry_point: "get_client_role_id.py"
 parameters:
     client_id:
       type: string
