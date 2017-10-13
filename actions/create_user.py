@@ -1,7 +1,7 @@
 from lib import action
 import json
 
-class KeycloakUserCreateAction(action.KeycloakBaseAction):
+class KeycloakCreateUserAction(action.KeycloakBaseAction):
     def run(self, username, email='', firstName='', lastName='', enabled=True, emailVerified=False):
         user_id = self.keycloak_admin.get_user_id(username=username)
         if user_id = None:

@@ -1,6 +1,6 @@
 from lib import action
 
-class KeycloakUserCreateAction(action.KeycloakBaseAction):
+class KeycloakGetUserAction(action.KeycloakBaseAction):
     def run(self, username):
 
         user = self.keycloak_admin.get_user(username=username)
