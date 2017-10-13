@@ -3,4 +3,5 @@ requests
 python-jose
 simplejson
 urllib3[secure]
+requests[secure]
 backports.ssl==0.0.9
