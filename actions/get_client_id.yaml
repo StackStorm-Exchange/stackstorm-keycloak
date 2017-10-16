@@ -5,7 +5,7 @@ description: "Get a client id from its name"
 enabled: true
 entry_point: "get_client_id.py"
 parameters:
-    clientname:
+    client_id_name:
       type: string
       description: "client name"
       required: true
