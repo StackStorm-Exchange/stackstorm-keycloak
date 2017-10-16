@@ -1,5 +1,4 @@
 git+git://github.com/devlinmr/python-keycloak.git
-requests
 python-jose
 simplejson
 urllib3[secure]
