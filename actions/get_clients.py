@@ -1,6 +1,6 @@
 from lib import action
 
 class KeycloakGetClientsAction(action.KeycloakBaseAction):
-    def run():
+    def run(self):
 
         return self.keycloak_admin.get_clients()
