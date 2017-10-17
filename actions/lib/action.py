@@ -16,11 +16,13 @@ class KeycloakBaseAction(Action):
         realm = self.config['realm']
         user = self.config['user']
         password = self.config['password']
+        verify = self.config['verify']
 
 
         client = KeycloakAdmin(server_url=scheme + "://" + host + ":" + port + "/auth/",
                        username=user,
                        password=password,
-                       realm_name=realm)
+                       realm_name=realm,
+                       verify=verify)
 
         return client
