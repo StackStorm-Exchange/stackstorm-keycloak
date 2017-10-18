@@ -36,4 +36,3 @@
     description: "SSL Verify. Default True"
     type: "boolean"
     required: true
-    default: true
