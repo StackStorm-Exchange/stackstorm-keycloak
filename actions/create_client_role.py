@@ -1,5 +1,4 @@
 from lib import action
-import json
 
 class KeycloakClientCreateAction(action.KeycloakBaseAction):
     def run(self, client_id, role_name):
