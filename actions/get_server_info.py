@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakGetServerInfoAction(action.KeycloakBaseAction):
     def run(self):
 

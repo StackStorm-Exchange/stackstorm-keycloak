@@ -3,6 +3,7 @@ from st2actions.runners.pythonrunner import Action
 # https://bitbucket.org/agriness/python-keycloak.git
 from keycloak import KeycloakAdmin
 
+
 class KeycloakBaseAction(Action):
 
     def __init__(self, config):
@@ -19,9 +20,9 @@ class KeycloakBaseAction(Action):
         verify = self.config['verify']
 
         client = KeycloakAdmin(server_url=scheme + "://" + host + ":" + port + "/auth/",
-                       username=user,
-                       password=password,
-                       realm_name=realm,
-                       verify=verify)
+                               username=user,
+                               password=password,
+                               realm_name=realm,
+                               verify=verify)
 
         return client

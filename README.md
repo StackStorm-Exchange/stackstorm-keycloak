@@ -1,19 +1,42 @@
-# StackStorm Exchange Incubator
+# Stackstorm Keycloak Pack
 
-### What is this?
+Pack built on python-keycloak module
 
-This repository is a very special place where user-submitted packs get reviewed, perfected, approved, and finally transferred to the Exchange.
+## Current Status & Capabilities
 
-If you want to submit your pack, it's simple! **Fork this repo, create a subdirectory with your pack, and open a Pull Request.** We'll take it from here. Even if your pack is work-in-progress, you can still submit it to get advice and early feedback from our engineers! Or ping us [on Slack](https://stackstorm.com/community-signup), which is generally the best place to get advice from the StackStorm Community.
+Runs keycloak admin operations:
+  - getters for user, client and role
+  - create/delete user
+  - create client
+  - create role
+  - assign client role to user
 
-Before you submit a pack, make sure to read the [Create and Contribute a Pack](https://docs.stackstorm.com/reference/packs.html) section of our documentation.
+## Roadmap
 
-Here's N.E.P.T.R. the StackStorm Exchange Governor, giving you a thumbs-up:
+Features to add:
+  - client create/delete
+  - ID Provider operations
+  - SMTP config
+  - Realm config
 
-![](http://i.imgur.com/3bqVAh0.gif)
+## Configuration
 
-## Contributors License Agreement
+Copy the example configuration in [keycloak.yaml.example](./keycloak.yaml.example)
+to `/opt/stackstorm/configs/keycloak.yaml` and edit as required.
 
-By contributing you agree that these contributions are your own (or approved by your employer) and
-you grant a full, complete, irrevocable copyright license to all users and developers of the
-project, present and future, pursuant to the license of the project.
+It must contain:
+
+* ``host`` - Keycloak server IP/name
+* ``scheme`` - http/https - default https
+* ``port`` - Keycloak server port
+* ``user`` - Keycloak user
+* ``password`` - Keycloak password
+* ``realm`` - Keycloak realm - default master
+* ``verify`` - Verify SSL certificate - default True
+
+You can also use dynamic values from the datastore. See the
+[docs](https://docs.stackstorm.com/reference/pack_configs.html) for more info.
+
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
