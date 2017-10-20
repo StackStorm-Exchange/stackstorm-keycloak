@@ -1,12 +1,12 @@
 name: get_user
 pack: keycloak
 runner_type: python-script
-description: "Get a user"
+description: "Get a user from ID"
 enabled: true
 entry_point: "get_user.py"
 parameters:
-    username:
+    user_id:
       type: string
-      description: "username"
+      description: "User ID"
       required: true
       position: 0
