@@ -1,0 +1,43 @@
+name: create_client
+pack: keycloak
+runner_type: python-script
+description: "Create a client"
+enabled: true
+entry_point: "create_client.py"
+parameters:
+    name:
+      type: string
+      description: "Display name"
+      required: true
+      position: 0
+    client_id:
+      type: string
+      description: "Oauth2 client-id"
+      required: true
+      position: 1
+    redirect_urls:
+      type: object
+      description: "Valid redirect URLs"
+      required: true
+      position: 2
+    protocol:
+      type: string
+      description: "Protocol"
+      position: 3
+      default: "openid-connect"
+    public_client:
+      type: boolean
+      description: "Is public client"
+      default: true
+    direct_access_grants:
+      type: boolean
+      description: "Direct access grants"
+      default: true
+
+cat <<EOF > /tmp/setup_keycloak/client_data.json
+{"name":"kubernetes-${ENVIRONMENT}",
+"clientId":"kubernetes-${ENVIRONMENT}",
+"publicClient":"true",
+"directAccessGrantsEnabled":"true",
+"redirectUris":["https://${REALM}.${ENVIRONMENT}.${DOMAIN}/*"]}
+EOF

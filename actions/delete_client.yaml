@@ -1,0 +1,12 @@
+name: delete_client
+pack: keycloak
+runner_type: python-script
+description: "Delete a client"
+enabled: true
+entry_point: "delete_client.py"
+parameters:
+    client_id:
+      type: string
+      description: "client id"
+      required: true
+      position: 0
