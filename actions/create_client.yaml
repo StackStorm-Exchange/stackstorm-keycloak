@@ -15,8 +15,8 @@ parameters:
       description: "Oauth2 client-id"
       required: true
       position: 1
-    redirect_urls:
-      type: object
+    redirect_uris:
+      type: array
       description: "Valid redirect URLs"
       required: true
       position: 2
@@ -33,11 +33,3 @@ parameters:
       type: boolean
       description: "Direct access grants"
       default: true
-
-cat <<EOF > /tmp/setup_keycloak/client_data.json
-{"name":"kubernetes-${ENVIRONMENT}",
-"clientId":"kubernetes-${ENVIRONMENT}",
-"publicClient":"true",
-"directAccessGrantsEnabled":"true",
-"redirectUris":["https://${REALM}.${ENVIRONMENT}.${DOMAIN}/*"]}
-EOF
