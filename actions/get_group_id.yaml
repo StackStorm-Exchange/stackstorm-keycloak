@@ -7,6 +7,9 @@ entry_point: "get_group_id.py"
 parameters:
     name:
       type: string
-      description: "client name"
-      required: true
-      position: 0
+      description: "group name: group or /group/subgroup"
+      required: false
+    name:
+      type: path
+      description: "group path: /group, /group/subgroup"
+      required: false
