@@ -1,0 +1,12 @@
+name: delete_group
+pack: keycloak
+runner_type: python-script
+description: "Delete a group"
+enabled: true
+entry_point: "delete_group.py"
+parameters:
+    group_id:
+      type: string
+      description: "group id"
+      required: true
+      position: 0
