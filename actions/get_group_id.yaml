@@ -1,0 +1,12 @@
+name: get_group_id
+pack: keycloak
+runner_type: python-script
+description: "Get a group id from its name"
+enabled: true
+entry_point: "get_group_id.py"
+parameters:
+    name:
+      type: string
+      description: "client name"
+      required: true
+      position: 0
