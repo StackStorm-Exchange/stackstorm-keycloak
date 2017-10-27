@@ -1,7 +1,7 @@
 from lib import action
 
-class KeycloakgetClientAction(action.KeycloakBaseAction):
-    def run(self, client_id):
+class KeycloakgetGroupAction(action.KeycloakBaseAction):
+    def run(self, group_id):
 
-        client = self.keycloak_admin.get_client(client_id=client_id)
-        return client
+        group = self.keycloak_admin.get_group(group_id=group_id)
+        return group
