@@ -9,7 +9,7 @@ parameters:
       type: string
       description: "group name: group or /group/subgroup"
       required: false
-    name:
-      type: path
+    path:
+      type: string
       description: "group path: /group, /group/subgroup"
       required: false

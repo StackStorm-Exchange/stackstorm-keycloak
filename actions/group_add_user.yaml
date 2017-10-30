@@ -1,0 +1,17 @@
+name: group_add_user
+pack: keycloak
+runner_type: python-script
+description: "Add a user to a group"
+enabled: true
+entry_point: "group_add_user.py"
+parameters:
+    user_id:
+      type: string
+      description: "user id to add"
+      required: true
+      position: 0
+    group_id:
+      type: object
+      description: "group to add to"
+      required: true
+      position: 1
