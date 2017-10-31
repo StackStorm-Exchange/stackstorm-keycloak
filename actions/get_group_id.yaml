@@ -7,9 +7,13 @@ entry_point: "get_group_id.py"
 parameters:
     name:
       type: string
-      description: "group name: group or /group/subgroup"
+      description: "group name"
       required: false
     path:
       type: string
-      description: "group path: /group, /group/subgroup"
+      description: "group path: /group, /group/subgroup. Use for nested groups (optional)."
+      required: false
+    parent:
+      type: string
+      description: "parent group id. Use for nested groups (optional)."
       required: false

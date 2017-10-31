@@ -14,14 +14,14 @@ parameters:
       type: string
       description: "keycloak internal client id"
       required: true
-      position: 1
+      position: 2
     role_id:
       type: string
       description: "keycloak internal client role id"
       required: true
-      position: 2
+      position: 3
     role_name:
       type: string
       description: "client role name"
       required: true
-      position: 3
+      position: 4

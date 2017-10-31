@@ -1,15 +1,19 @@
-name: create_client_role
+name: create_group
 pack: keycloak
 runner_type: python-script
-description: "Create a client role"
+description: "Create a group"
 enabled: true
-entry_point: "create_client_role.py"
+entry_point: "create_group.py"
 parameters:
     name:
       type: string
       description: "group name"
-      required: true
-      position: 0
+    parent:
+      type: string
+      description: "parent group id"
+    path:
+      type: string
+      description: "group path, an alternative to name"
     client_roles:
       type: object
       description: "client roles to include in group"

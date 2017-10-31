@@ -11,7 +11,7 @@ parameters:
       required: true
       position: 0
     group_id:
-      type: object
+      type: string
       description: "group to add to"
       required: true
       position: 1
