@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakgetUserIdAction(action.KeycloakBaseAction):
     def run(self, username):
 

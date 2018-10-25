@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakGetClientsAction(action.KeycloakBaseAction):
     def run(self):
 

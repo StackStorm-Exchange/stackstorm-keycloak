@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakGetGroupIdAction(action.KeycloakBaseAction):
     def run(self, path=None, search_in_subgroups=True):
 

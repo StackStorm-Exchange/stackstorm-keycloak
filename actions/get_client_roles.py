@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakGetClientRolesAction(action.KeycloakBaseAction):
     def run(self, client_id):
 

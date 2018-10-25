@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakUpdateAuthenticationFlowExecutionsAction(action.KeycloakBaseAction):
     def run(self, flow_alias, payload, skip_exists=False):
 

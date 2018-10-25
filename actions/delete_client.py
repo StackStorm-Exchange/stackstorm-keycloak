@@ -1,5 +1,6 @@
 from lib import action
 
+
 class KeycloakDeleteClientAction(action.KeycloakBaseAction):
     def run(self, client_id):
 
