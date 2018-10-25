@@ -1,8 +1,7 @@
-### Place information about your pack version here.
 ---
 ref: keycloak
 name: keycloak
 description: Keycloak Admin pack
-version: 0.1.2
+version: 0.1.3
 author: devlinmr
 email: devlinm@gmail.com

@@ -1,1 +1,1 @@
-git+git://github.com/devlinmr/python-keycloak.git
+python-keycloak==0.13.3
