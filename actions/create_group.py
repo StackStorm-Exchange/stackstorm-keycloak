@@ -2,5 +2,12 @@ from lib import action
 
 
 class KeycloakGroupCreateAction(action.KeycloakBaseAction):
-    def run(self, name, path, client_roles, realm_roles, sub_groups, parent):
-        self.keycloak_admin.create_group(name=name, path=path, client_roles=client_roles, realm_roles=realm_roles, sub_groups=sub_groups, parent=parent)
+    def run(self, name, path, clientRoles={}, realmRoles=[], subGroups={}, parent=None, skip_exists=True):
+        payload = {}
+        payload['name']=name
+        payload['path']=path
+        payload['clientRoles']=clientRoles
+        payload['realmRoles']=realmRoles
+        payload['subGroups']=subGroups
+
+        self.keycloak_admin.create_group(payload=payload, parent=parent, skip_exists=skip_exists)

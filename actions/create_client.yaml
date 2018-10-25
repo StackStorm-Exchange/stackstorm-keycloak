@@ -10,12 +10,12 @@ parameters:
       description: "Display name"
       required: true
       position: 0
-    client_id:
+    clientId:
       type: string
       description: "Oauth2 client-id"
       required: true
       position: 1
-    redirect_uris:
+    redirectUris:
       type: array
       description: "Valid redirect URLs"
       required: true
@@ -25,11 +25,15 @@ parameters:
       description: "Protocol"
       position: 3
       default: "openid-connect"
-    public_client:
+    publicClient:
       type: boolean
       description: "Is public client"
       default: true
-    direct_access_grants:
+    directAccessGrantsEnabled:
       type: boolean
       description: "Direct access grants"
+      default: true
+    skip_exists:
+      type: boolean
+      description: "Treat create existing resources as valid"
       default: true

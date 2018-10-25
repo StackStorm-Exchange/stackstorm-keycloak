@@ -3,6 +3,7 @@ from st2common.runners.base_action import Action
 # https://bitbucket.org/agriness/python-keycloak.git
 from keycloak import KeycloakAdmin
 
+
 class KeycloakBaseAction(Action):
 
     def __init__(self, config):

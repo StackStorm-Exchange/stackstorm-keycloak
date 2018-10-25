@@ -14,12 +14,16 @@ parameters:
     path:
       type: string
       description: "group path, an alternative to name"
-    client_roles:
+    clientRoles:
       type: object
-      description: "client roles to include in group"
-    realm_roles:
+      description: "Map of client roles to associate with group"
+    realmRoles:
       type: array
-      description: "realm roles to include in group"
-    sub_groups:
+      description: "Array of realm roles to associate with group"
+    subGroups:
       type: array
-      description: "sub groups include in group"
+      description: "Array of sub group objects to associate with group"
+    skip_exists:
+      type: boolean
+      description: "Treat create existing resources as valid"
+      default: true
