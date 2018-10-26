@@ -2,7 +2,8 @@ from lib import action
 
 
 class KeycloakUpdateUserAction(action.KeycloakBaseAction):
-    def run(self, username, email='', firstName='', lastName='', enabled=True, emailVerified=False, password=None, passwordTemp=True):
+    def run(self, username, email='', firstName='', lastName='', enabled=True, emailVerified=False,
+            password=None, passwordTemp=True):
         payload = {}
         payload['username']=username
         payload['email']=email

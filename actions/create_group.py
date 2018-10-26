@@ -2,7 +2,8 @@ from lib import action
 
 
 class KeycloakGroupCreateAction(action.KeycloakBaseAction):
-    def run(self, name, path, clientRoles={}, realmRoles=[], subGroups={}, parent=None, skip_exists=True):
+    def run(self, name, path, clientRoles={}, realmRoles=[], subGroups={},
+            parent=None, skip_exists=True):
         payload = {}
         payload['name']=name
         payload['path']=path

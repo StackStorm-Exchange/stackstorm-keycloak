@@ -2,7 +2,8 @@ from lib import action
 
 
 class KeycloakClientCreateAction(action.KeycloakBaseAction):
-    def run(self, name, clientId, redirectUris, protocol, publicClient, directAccessGrantsEnabled, skip_exists=True):
+    def run(self, name, clientId, redirectUris, protocol, publicClient,
+            directAccessGrantsEnabled, skip_exists=True):
         payload = {}
         payload['name']=name
         payload['clientId']=clientId
