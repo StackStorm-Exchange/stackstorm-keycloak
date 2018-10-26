@@ -20,9 +20,9 @@ class KeycloakBaseAction(Action):
         verify = self.config['verify']
 
         client = KeycloakAdmin(server_url=scheme + "://" + host + ":" + port + "/auth/",
-                       username=user,
-                       password=password,
-                       realm_name=realm,
-                       verify=verify)
+                               username=user,
+                               password=password,
+                               realm_name=realm,
+                               verify=verify)
 
         return client
