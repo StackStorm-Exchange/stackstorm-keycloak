@@ -7,6 +7,6 @@ entry_point: "get_user.py"
 parameters:
     username:
       type: string
-      description: "username"
+      description: "user_id"
       required: true
       position: 0

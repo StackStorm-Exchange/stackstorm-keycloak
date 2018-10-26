@@ -19,6 +19,6 @@ class KeycloakUpdateUserAction(action.KeycloakBaseAction):
 
         user_id = self.keycloak_admin.get_user_id(username=username)
         if user_id is not None:
-            self.keycloak_admin.update_user(payload)
+            self.keycloak_admin.update_user(user_id=user_id, payload=payload)
         else:
             return "User " + username + " does not exist"

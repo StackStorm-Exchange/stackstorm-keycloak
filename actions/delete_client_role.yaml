@@ -5,13 +5,8 @@ description: "Delete a client role"
 enabled: true
 entry_point: "delete_client_role.py"
 parameters:
-    client_id:
-      type: string
-      description: "keycloak internal client id"
-      required: true
-      position: 0
     role_name:
       type: string
       description: "client role name"
       required: true
-      position: 1
+      position: 0
