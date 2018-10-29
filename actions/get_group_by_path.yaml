@@ -1,0 +1,16 @@
+name: get_group_by_path
+pack: keycloak
+runner_type: python-script
+description: "Get a group from its name or path"
+enabled: true
+entry_point: "get_group_by_path.py"
+parameters:
+    path:
+      type: string
+      description: "group path: /group, /group/subgroup."
+      required: true
+    search_in_subgroups:
+      type: boolean
+      description: "Whether to search subgroups as well as top-level groups"
+      default: true
+      required: false

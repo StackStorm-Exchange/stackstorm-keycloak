@@ -1,0 +1,12 @@
+name: update_authentication_flow_executions
+pack: keycloak
+runner_type: python-script
+description: "Update authentication flow executions"
+enabled: true
+entry_point: "update_authentication_flow_executions.py"
+parameters:
+    payload:
+      type: string
+      description: "https://www.keycloak.org/docs-api/4.1/rest-api/index.html#_authenticationexecutioninforepresentation"
+      required: true
+      position: 0

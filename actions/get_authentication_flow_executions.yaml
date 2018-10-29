@@ -1,0 +1,12 @@
+name: get_authentication_flow_executions
+pack: keycloak
+runner_type: python-script
+description: "Get all authentication flow executionss"
+enabled: true
+entry_point: "get_authentication_flow_executions.py"
+parameters:
+    flow_alias:
+      type: string
+      description: "execution flow alias"
+      required: true
+      position: 0

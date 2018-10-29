@@ -27,5 +27,12 @@ parameters:
       default: true
     emailVerified:
       type: boolean
-      description: "is emil verified"
+      description: "is email verified"
       default: false
+    password:
+      type: string
+      description: "User Password (optional)"
+    passwordTemp:
+      type: boolean
+      description: "is password temporary"
+      default: true

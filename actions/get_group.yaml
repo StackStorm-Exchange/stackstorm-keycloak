@@ -1,12 +1,12 @@
-name: get_user
+name: get_group
 pack: keycloak
 runner_type: python-script
-description: "Get a user"
+description: "Get a group"
 enabled: true
-entry_point: "get_user.py"
+entry_point: "get_group.py"
 parameters:
-    username:
+    group_id:
       type: string
-      description: "user_id"
+      description: "group id"
       required: true
       position: 0

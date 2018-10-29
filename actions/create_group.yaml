@@ -1,0 +1,29 @@
+name: create_group
+pack: keycloak
+runner_type: python-script
+description: "Create a group"
+enabled: true
+entry_point: "create_group.py"
+parameters:
+    name:
+      type: string
+      description: "group name"
+    parent:
+      type: string
+      description: "parent group id"
+    path:
+      type: string
+      description: "group path, an alternative to name"
+    clientRoles:
+      type: object
+      description: "Map of client roles to associate with group"
+    realmRoles:
+      type: array
+      description: "Array of realm roles to associate with group"
+    subGroups:
+      type: array
+      description: "Array of sub group objects to associate with group"
+    skip_exists:
+      type: boolean
+      description: "Treat create existing resources as valid"
+      default: true

@@ -10,12 +10,14 @@ Runs keycloak admin operations:
   - create client
   - create role
   - assign client role to user
+  - client create/delete
+  - ID Provider operations
+  - Auth flow operations
 
 ## Roadmap
 
 Features to add:
-  - client create/delete
-  - ID Provider operations
+
   - SMTP config
   - Realm config
 

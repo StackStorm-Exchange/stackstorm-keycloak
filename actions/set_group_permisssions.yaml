@@ -1,0 +1,15 @@
+name: set_group_permisssions
+pack: keycloak
+runner_type: python-script
+description: "enable/disable permissions on a group"
+enabled: true
+entry_point: "set_group_permisssions.py"
+parameters:
+    group_id:
+      type: string
+      description: "group id"
+      required: true
+    enabled:
+      type: boolean
+      description: "enabled or disabled"
+      required: true

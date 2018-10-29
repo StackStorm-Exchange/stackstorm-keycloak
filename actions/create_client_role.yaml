@@ -10,8 +10,12 @@ parameters:
       description: "keycloak internal client id"
       required: true
       position: 0
-    role_name:
+    name:
       type: string
       description: "client role name"
       required: true
       position: 1
+    skip_exists:
+      type: boolean
+      description: "Treat create existing resources as valid"
+      default: true

@@ -1,0 +1,16 @@
+name: create_authentication_flow
+pack: keycloak
+runner_type: python-script
+description: "Create an authentication flow"
+enabled: true
+entry_point: "create_authentication_flow.py"
+parameters:
+    payload:
+      type: string
+      description: "https://www.keycloak.org/docs-api/4.1/rest-api/index.html#_authenticationflowrepresentation"
+      required: true
+      position: 0
+    skip_exists:
+      type: boolean
+      description: "Treat create existing resources as valid"
+      default: true

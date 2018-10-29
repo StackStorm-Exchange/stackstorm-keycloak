@@ -15,13 +15,8 @@ parameters:
       description: "keycloak internal client id"
       required: true
       position: 1
-    role_id:
-      type: string
-      description: "keycloak internal client role id"
+    roles:
+      type: array
+      description: "client role names"
       required: true
       position: 2
-    role_name:
-      type: string
-      description: "client role name"
-      required: true
-      position: 3

@@ -1,0 +1,12 @@
+name: delete_client_role
+pack: keycloak
+runner_type: python-script
+description: "Delete a client role"
+enabled: true
+entry_point: "delete_client_role.py"
+parameters:
+    role_name:
+      type: string
+      description: "client role name"
+      required: true
+      position: 0

@@ -4,4 +4,4 @@ from lib import action
 class KeycloakgetRolesAction(action.KeycloakBaseAction):
     def run(self):
 
-        return self.keycloak_admin.get_realm_roles()
+        return self.keycloak_admin.get_idps()
