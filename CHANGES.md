@@ -1,8 +1,8 @@
 # Change Log
 
-## 0.1.0
+## 0.1.4
 
- - Initial Release
+ - Version bump to fix tagging issues, no code changes
 
 ## 0.1.3
 
@@ -10,3 +10,7 @@
  - Rework get_group functions.
  - Add get_idps
  - Add authentication flow actions
+
+## 0.1.0
+
+ - Initial Release
