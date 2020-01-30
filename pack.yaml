@@ -5,3 +5,6 @@ description: Keycloak Admin pack
 version: 0.1.4
 author: devlinmr
 email: devlinm@gmail.com
+python_versions:
+  - "2"
+  - "3"
